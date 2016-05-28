@@ -106,9 +106,10 @@ public class SSHExec {
 	 * @return SSHExec instance
 	 */
 	public static SSHExec getInstance(ConnBean conn) {
-		if (ssh == null) {
+		//fix the issue of get the previous connection when conn is different
+		//if (ssh == null) {
 			ssh = new SSHExec(conn);
-		}
+		//}
 		return ssh;
 	}
 
@@ -120,9 +121,13 @@ public class SSHExec {
 	public Boolean connect() {
 		try {
 			session = jsch.getSession(conn.getUser(), conn.getHost(),SysConfigOption.SSH_PORT_NUMBER);
-			UserInfo ui = new ConnCredential(conn.getPassword());
+			session.setPassword(conn.getPassword());
+			
+			//UserInfo ui = new ConnCredential(conn.getPassword());
 			logger.putMsg(Logger.INFO,"Session initialized and associated with user credential " + conn.getPassword());
-			session.setUserInfo(ui);
+			//session.setUserInfo(ui);
+			//fix the issue on com.jcraft.jsch.JSchException: Auth fail
+			session.setConfig("StrictHostKeyChecking", "no");
 			logger.putMsg(Logger.INFO,"SSHExec initialized successfully");
 			logger.putMsg(Logger.INFO,"SSHExec trying to connect " + conn.getUser() + "@" + conn.getHost());
 			session.connect(3600000);
