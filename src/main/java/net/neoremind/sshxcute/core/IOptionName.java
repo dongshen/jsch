@@ -1,7 +1,5 @@
 package net.neoremind.sshxcute.core;
 
-import java.io.File;
-
 public class IOptionName {
 
 	public static String TIMEOUT = "TIMEOUT";

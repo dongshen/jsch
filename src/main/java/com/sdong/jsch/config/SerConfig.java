@@ -1,6 +1,7 @@
 package com.sdong.jsch.config;
 
 public class SerConfig {
+	String serverName = "";
 	String serverIP = "";
 	String user = "";
 	String password = "";
@@ -38,9 +39,18 @@ public class SerConfig {
 		this.command = command;
 	}
 
+	public String getServerName() {
+		return serverName;
+	}
+
+	public void setServerName(String serverName) {
+		this.serverName = serverName;
+	}
+
 	@Override
 	public String toString() {
-		return serverIP + ", " + user + ", " + password + ", " + command;
+		return serverName + ", " + serverIP + ", " + user + ", " + password + ", " + command;
 	}
+
 
 }

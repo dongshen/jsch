@@ -2,7 +2,7 @@ package com.sdong.jsch.config;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Properties;
 
@@ -13,8 +13,8 @@ import com.sdong.jsch.exception.ConfigException;
 public class GetConfig {
 	private static final Logger LOG = Logger.getLogger(GetConfig.class);
 
-	public static Map<String, SerConfig> getServerConfig() throws ConfigException {
-		Map<String, SerConfig> ser = new HashMap<String, SerConfig>();
+	public static ArrayList<SerConfig> getServerConfig() throws ConfigException {
+		ArrayList<SerConfig> ser = new ArrayList<SerConfig>();
 
 		Properties serversProp = new Properties();
 		try {
@@ -25,21 +25,22 @@ public class GetConfig {
 		}
 
 		for (Map.Entry<Object, Object> serverProp : serversProp.entrySet()) {
-			String serName = (String) serverProp.getKey();
+			String serverName = (String) serverProp.getKey();
 			String serverInfo = (String) serverProp.getValue();
 			String[] serverDetail = serverInfo.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 			if (serverDetail == null || serverDetail.length != 4) {
-				String error = "server:" + serName + ":" + serverInfo + ",get setting error!";
+				String error = "server:" + serverName + ":" + serverInfo + ",get setting error!";
 				LOG.error(error);
 				throw new ConfigException(error);
 			}
 
 			SerConfig serConfig = new SerConfig();
+			serConfig.setServerName(serverName);
 			serConfig.setServerIP(foramteStr(serverDetail[0]));
 			serConfig.setUser(foramteStr(serverDetail[1]));
 			serConfig.setPassword(foramteStr(serverDetail[2]));
 			serConfig.setCommand(foramteStr(serverDetail[3]));
-			ser.put(serName, serConfig);
+			ser.add(serConfig);
 
 		}
 		return ser;
