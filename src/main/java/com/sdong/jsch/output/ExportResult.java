@@ -19,7 +19,7 @@ public class ExportResult {
 
 		try {
 
-			outputFile = "output" + File.separator + outputFile;
+			//outputFile = "output" + File.separator + outputFile;
 
 			String lineSeperator = System.getProperty("line.separator");
 			Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFile), "utf-8"));

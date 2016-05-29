@@ -1,7 +1,5 @@
 package com.sdong.jsch.config;
 
-import java.util.ArrayList;
-
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -14,7 +12,8 @@ public class GetConfigTest {
 	@Test
 	public void testGetServerConfig() {
 		try {
-			ArrayList<SerConfig> serSet = GetConfig.getServerConfig();
+			String inputFile = "config\\servers.properties";
+			ServerSetting serSet = GetConfig.getServerConfig(inputFile);
 			LOG.debug(serSet.toString());
 		} catch (ConfigException e) {
 			// TODO Auto-generated catch block

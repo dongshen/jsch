@@ -1,0 +1,161 @@
+
+=============== [2016/05/29 20:59:56, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:02:56, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:03:24, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:03:38, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:04:38, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:05:04, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:05:48, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:23:04, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:23:28, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:24:52, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:27:36, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:29:10, com.sdong.jsch.AntMan.<clinit>:20] ====================
+
+
+=============== [2016/05/29 21:29:10, com.sdong.jsch.execute.ExecuteTask.<clinit>:15] ====================
+
+
+=============== [2016/05/29 21:29:10, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[21:29:10] INFO:    SSHExec initializing ...
+[21:29:10] INFO:    Session initialized and associated with user credential code,dex123
+[21:29:10] INFO:    SSHExec initialized successfully
+[21:29:10] INFO:    SSHExec trying to connect root@192.168.0.12
+
+=============== [2016/05/29 22:29:07, com.sdong.jsch.execute.ExecuteTask.<clinit>:17] ====================
+
+
+=============== [2016/05/29 22:29:07, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[22:29:07] INFO:    Set system configuration parameter 'HALT_ON_FAILURE' to new value 'false'
+[22:29:07] INFO:    Set system configuration parameter 'SSH_PORT_NUMBER' to new value '22'
+[22:29:07] INFO:    Set system configuration parameter 'INTEVAL_TIME_BETWEEN_TASKS' to new value '50'
+[22:29:07] INFO:    Set system configuration parameter 'TIMEOUT' to new value '1000'
+[22:29:07] INFO:    ******************************************************
+[22:29:07] INFO:    The list below shows sshxcute configuration parameter
+[22:29:07] INFO:    ******************************************************
+[22:29:07] INFO:    TIMEOUT => 1000
+[22:29:07] INFO:    HALT_ON_FAILURE => false
+[22:29:07] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 50
+[22:29:07] INFO:    SSH_PORT_NUMBER => 22
+[22:29:07] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+
+=============== [2016/05/29 22:36:29, com.sdong.jsch.AntMan.<clinit>:21] ====================
+
+
+=============== [2016/05/29 22:36:29, com.sdong.jsch.execute.ExecuteTask.<clinit>:17] ====================
+
+
+=============== [2016/05/29 22:36:29, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[22:36:29] INFO:    Set system configuration parameter 'HALT_ON_FAILURE' to new value 'false'
+[22:36:29] INFO:    Set system configuration parameter 'SSH_PORT_NUMBER' to new value '22'
+[22:36:29] INFO:    Set system configuration parameter 'INTEVAL_TIME_BETWEEN_TASKS' to new value '500'
+[22:36:29] INFO:    Set system configuration parameter 'TIMEOUT' to new value '100000'
+[22:36:29] INFO:    ******************************************************
+[22:36:29] INFO:    The list below shows sshxcute configuration parameter
+[22:36:29] INFO:    ******************************************************
+[22:36:29] INFO:    TIMEOUT => 100000
+[22:36:29] INFO:    HALT_ON_FAILURE => false
+[22:36:29] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 500
+[22:36:29] INFO:    SSH_PORT_NUMBER => 22
+[22:36:29] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+[22:36:29] INFO:    ******************************************************
+[22:36:29] INFO:    The list below shows sshxcute configuration parameter
+[22:36:29] INFO:    ******************************************************
+[22:36:29] INFO:    TIMEOUT => 100000
+[22:36:29] INFO:    HALT_ON_FAILURE => false
+[22:36:29] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 500
+[22:36:29] INFO:    SSH_PORT_NUMBER => 22
+[22:36:29] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+[22:36:29] INFO:    ******************************************************
+[22:36:29] INFO:    The list below shows sshxcute configuration parameter
+[22:36:29] INFO:    ******************************************************
+[22:36:29] INFO:    TIMEOUT => 100000
+[22:36:29] INFO:    HALT_ON_FAILURE => false
+[22:36:29] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 500
+[22:36:29] INFO:    SSH_PORT_NUMBER => 22
+[22:36:29] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+[22:36:29] INFO:    ******************************************************
+[22:36:29] INFO:    The list below shows sshxcute configuration parameter
+[22:36:29] INFO:    ******************************************************
+[22:36:29] INFO:    TIMEOUT => 100000
+[22:36:29] INFO:    HALT_ON_FAILURE => false
+[22:36:29] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 500
+[22:36:29] INFO:    SSH_PORT_NUMBER => 22
+[22:36:29] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+
+=============== [2016/05/29 22:36:29, com.sdong.jsch.output.ExportResult.<clinit>:16] ====================
+
+[22:36:29] ERROR:   Output result fail with the following exception: java.io.FileNotFoundException: output\output\test.log (系统找不到指定的路径。)
+
+=============== [2016/05/29 22:40:58, com.sdong.jsch.AntMan.<clinit>:21] ====================
+
+
+=============== [2016/05/29 22:40:58, com.sdong.jsch.execute.ExecuteTask.<clinit>:14] ====================
+
+
+=============== [2016/05/29 22:40:58, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[22:40:58] INFO:    Set system configuration parameter 'HALT_ON_FAILURE' to new value 'false'
+[22:40:58] INFO:    Set system configuration parameter 'SSH_PORT_NUMBER' to new value '22'
+[22:40:58] INFO:    Set system configuration parameter 'INTEVAL_TIME_BETWEEN_TASKS' to new value '500'
+[22:40:58] INFO:    Set system configuration parameter 'TIMEOUT' to new value '100000'
+[22:40:58] INFO:    ******************************************************
+[22:40:58] INFO:    The list below shows sshxcute configuration parameter
+[22:40:58] INFO:    ******************************************************
+[22:40:58] INFO:    TIMEOUT => 100000
+[22:40:58] INFO:    HALT_ON_FAILURE => false
+[22:40:58] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 500
+[22:40:58] INFO:    SSH_PORT_NUMBER => 22
+[22:40:58] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+[22:40:58] INFO:    ******************************************************
+[22:40:58] INFO:    The list below shows sshxcute configuration parameter
+[22:40:58] INFO:    ******************************************************
+[22:40:58] INFO:    TIMEOUT => 100000
+[22:40:58] INFO:    HALT_ON_FAILURE => false
+[22:40:58] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 500
+[22:40:58] INFO:    SSH_PORT_NUMBER => 22
+[22:40:58] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+[22:40:58] INFO:    ******************************************************
+[22:40:58] INFO:    The list below shows sshxcute configuration parameter
+[22:40:58] INFO:    ******************************************************
+[22:40:58] INFO:    TIMEOUT => 100000
+[22:40:58] INFO:    HALT_ON_FAILURE => false
+[22:40:58] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 500
+[22:40:58] INFO:    SSH_PORT_NUMBER => 22
+[22:40:58] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+[22:40:58] INFO:    ******************************************************
+[22:40:58] INFO:    The list below shows sshxcute configuration parameter
+[22:40:58] INFO:    ******************************************************
+[22:40:58] INFO:    TIMEOUT => 100000
+[22:40:58] INFO:    HALT_ON_FAILURE => false
+[22:40:58] INFO:    INTEVAL_TIME_BETWEEN_TASKS => 500
+[22:40:58] INFO:    SSH_PORT_NUMBER => 22
+[22:40:58] INFO:    ERROR_MSG_BUFFER_TEMP_FILE_PATH => C:\Users\shendong\sshxcute_err.msg
+
+=============== [2016/05/29 22:40:58, com.sdong.jsch.output.ExportResult.<clinit>:16] ====================
+
