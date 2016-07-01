@@ -35,26 +35,45 @@ public class Utils {
 		try {
 			cmd = parser.parse(options, args);
 
-			//check input
-			if (!cmd.hasOption("i")) {
-				System.err.println("-i <input file for execute command line> is required.");
-				printHelp();
-			} else {
-				String inputFile = cmd.getOptionValue("i");
-				File infile = new File(inputFile);
-				if (!infile.exists()) {
-					System.err.println("Please make sure the input file is exist.");
-					System.exit(1);
+			if (cmd != null) {
+				// check input
+				if (!cmd.hasOption("i")) {
+					System.err.println("-i <input file for execute command line> is required.");
+					printHelp();
+				} else {
+					String inputFile = cmd.getOptionValue("i");
+					File infile = new File(inputFile);
+					if (!infile.exists()) {
+						System.err.println("Please make sure the input file is exist.");
+						System.exit(1);
+					}
+					runParameters.setInputFile(inputFile);
 				}
-				runParameters.setInputFile(inputFile);
-			}
 
-			if (!cmd.hasOption("o")) {
-				System.out.println("-o <result output file for execute command line> is required.");
+				// check output
+				if (!cmd.hasOption("o")) {
+					System.out.println("-o <result output file for execute command line> is required.");
+				} else {
+					runParameters.setOutputFile(cmd.getOptionValue("o"));
+				}
+
+				if (cmd.hasOption("j")) {
+					String threadnum = cmd.getOptionValue("j");
+					try {
+						int num = Integer.parseInt(threadnum);
+						if(num <= 0){
+							System.err.println("Wrong value for parameter -j");
+							printHelp();
+						}
+						runParameters.setThreadNum(num);
+					} catch (NumberFormatException e) {
+						System.err.println("Wrong value for parameter -j");
+						printHelp();
+					}
+				}
 			} else {
-				runParameters.setOutputFile(cmd.getOptionValue("o"));
+				printHelp();
 			}
-
 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
@@ -75,6 +94,7 @@ public class Utils {
 				"AntMan will help you execute command based on Linux server list and return the output result to you.");
 		System.out.println("-i <filename> -- input file which include server list and executed command");
 		System.out.println("-o <filename> -- save executed command result");
+		System.out.println("-j <threadnum> -- the number of run thread, is option,default is 1");
 		System.exit(1);
 	}
 }
