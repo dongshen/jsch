@@ -15,15 +15,9 @@
 	</properties>
 
 	<dependencies>
-	<!-- 
-		<dependency>
-			<groupId>net.neoremind.sshxcute</groupId>
-			<artifactId>sshxcute</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/sshxcute-1.0.jar</systemPath>
-		</dependency>
-		 -->
+		<!-- <dependency> <groupId>net.neoremind.sshxcute</groupId> <artifactId>sshxcute</artifactId> 
+			<version>1.0</version> <scope>system</scope> <systemPath>${project.basedir}/lib/sshxcute-1.0.jar</systemPath> 
+			</dependency> -->
 		<dependency>
 			<groupId>com.jcraft</groupId>
 			<artifactId>jsch</artifactId>
@@ -33,6 +27,11 @@
 			<groupId>com.jcraft</groupId>
 			<artifactId>jzlib</artifactId>
 			<version>1.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-cli</groupId>
+			<artifactId>commons-cli</artifactId>
+			<version>1.3.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
