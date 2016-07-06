@@ -49,7 +49,7 @@ public class SerConfig {
 
 	@Override
 	public String toString() {
-		return serverName + ", " + serverIP + ", " + user + ", " + password + ", " + command;
+		return serverName + ", " + serverIP + ", " + command;
 	}
 
 

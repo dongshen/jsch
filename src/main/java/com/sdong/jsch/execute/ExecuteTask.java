@@ -1,11 +1,9 @@
 package com.sdong.jsch.execute;
 
-import com.sdong.jsch.config.DefaultSetting;
 import com.sdong.jsch.config.RunResult;
 import com.sdong.jsch.config.SerConfig;
 
 import net.neoremind.sshxcute.core.ConnBean;
-import net.neoremind.sshxcute.core.IOptionName;
 import net.neoremind.sshxcute.core.Logger;
 import net.neoremind.sshxcute.core.Result;
 import net.neoremind.sshxcute.core.SSHExec;
@@ -16,7 +14,13 @@ import net.neoremind.sshxcute.task.impl.ExecCommand;
 public class ExecuteTask {
 	static Logger logger = Logger.getLogger();
 
-	public static RunResult Execute(SerConfig serConfig) {
+	private SerConfig serConfig;
+
+	public ExecuteTask(SerConfig serConfig) {
+		this.serConfig = serConfig;
+	}
+
+	public RunResult Execute() {
 		SSHExec ssh = null;
 		Result res = null;
 		try {
@@ -48,18 +52,14 @@ public class ExecuteTask {
 		return new RunResult(serConfig, res);
 	}
 
-	public static void ChangeDefatulSetting(DefaultSetting defaultSetting) {
-		SSHExec.setOption(IOptionName.HALT_ON_FAILURE, defaultSetting.isHalt_on_Failure());
-		SSHExec.setOption(IOptionName.SSH_PORT_NUMBER, defaultSetting.getSsh_port_number());
-		// SSHExec.setOption(IOptionName.ERROR_MSG_BUFFER_TEMP_FILE_PATH,
-		// "c:\\123.err");
-		SSHExec.setOption(IOptionName.INTEVAL_TIME_BETWEEN_TASKS, defaultSetting.getInterval_time_between_tasks());
-		SSHExec.setOption(IOptionName.TIMEOUT, defaultSetting.getTimeout());
-		try {
-			SSHExec.showEnvConfig();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public SerConfig getSerConfig() {
+		return serConfig;
 	}
+
+	public void setSerConfig(SerConfig serConfig) {
+		this.serConfig = serConfig;
+	}
+	
+	
+
 }

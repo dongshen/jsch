@@ -1,10 +1,11 @@
 package com.sdong.jsch.execute;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
 import com.sdong.jsch.config.DefaultSetting;
+import com.sdong.jsch.config.ServerSetting;
 
 public class ExecuteTaskTest {
 
@@ -18,7 +19,7 @@ public class ExecuteTaskTest {
 		DefaultSetting defaultSetting = new DefaultSetting();
 		defaultSetting.setInterval_time_between_tasks(50);
 		defaultSetting.setTimeout(1000);
-		ExecuteTask.ChangeDefatulSetting(defaultSetting);
+		JschSetting.ChangeDefatulSetting(defaultSetting);
 	}
 
 }
