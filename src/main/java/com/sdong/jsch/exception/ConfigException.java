@@ -15,5 +15,16 @@ public class ConfigException extends Exception {
 	public String getMessage() {
 		return reason;
 	}
+	
+	public ConfigException(Exception cause) {
+		super(cause);
+		this.reason = cause.getMessage();
+
+	}
+
+	public ConfigException(Throwable cause) {
+		super(cause);
+		this.reason = cause.getMessage();
+	}
 
 }

@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.sdong.jsch.config.GetConfig;
 import com.sdong.jsch.config.RunParameters;
 import com.sdong.jsch.config.RunResult;
@@ -16,14 +19,12 @@ import com.sdong.jsch.execute.WorkerThread;
 import com.sdong.jsch.output.ExportResult;
 import com.sdong.jsch.utils.Utils;
 
-import net.neoremind.sshxcute.core.Logger;
-
 /**
  * Hello world! I am AntMan, Let me help you!
  *
  */
 public class AntMan {
-	static Logger logger = Logger.getLogger();
+	private static final Logger logger = LoggerFactory.getLogger(AntMan.class);
 
 	public static void main(String[] args) {
 
@@ -33,8 +34,7 @@ public class AntMan {
 
 			Run(runParameters);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 
 	}
@@ -60,8 +60,7 @@ public class AntMan {
 			// output
 			ExportResult.output(runParameters.getOutputFile(), resultList);
 		} catch (ConfigException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 	}
 
@@ -92,10 +91,8 @@ public class AntMan {
 			}
 			System.out.println("Finished all threads");
 		} catch (ConfigException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
-
 	}
 
 }

@@ -1,14 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>sdong</groupId>
+		<artifactId>sdong_base</artifactId>
+		<version>1.0</version>
+	</parent>
 
 	<groupId>com.sdong</groupId>
-	<artifactId>jsch</artifactId>
+	<artifactId>antMan</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>jsch</name>
-	<url>http://maven.apache.org</url>
+	<name>antMan</name>
+	<url>https://github.com/dongshen/jsch.git</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,12 +22,17 @@
 
 	<dependencies>
 		<!-- <dependency> <groupId>net.neoremind.sshxcute</groupId> <artifactId>sshxcute</artifactId> 
-			<version>1.0</version> <scope>system</scope> <systemPath>${project.basedir}/lib/sshxcute-1.0.jar</systemPath> 
+			<version>1.0</version> <scope>system</sc ope> <systemPath>${project.basedir}/lib/sshxcute-1.0.jar</systemPath> 
 			</dependency> -->
+		<dependency>
+			<groupId>sdong</groupId>
+			<artifactId>sdong_common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 		<dependency>
 			<groupId>com.jcraft</groupId>
 			<artifactId>jsch</artifactId>
-			<version>0.1.53</version>
+			<version>0.1.54</version>
 		</dependency>
 		<dependency>
 			<groupId>com.jcraft</groupId>
@@ -33,16 +44,6 @@
 			<artifactId>commons-cli</artifactId>
 			<version>1.3.1</version>
 		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-		</dependency>
+
 	</dependencies>
 </project>
