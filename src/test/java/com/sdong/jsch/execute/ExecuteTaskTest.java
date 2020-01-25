@@ -5,7 +5,7 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 
 import com.sdong.jsch.config.DefaultSetting;
-import com.sdong.jsch.config.ServerSetting;
+import com.sdong.jsch.exception.ConfigException;
 
 public class ExecuteTaskTest {
 
@@ -19,7 +19,12 @@ public class ExecuteTaskTest {
 		DefaultSetting defaultSetting = new DefaultSetting();
 		defaultSetting.setInterval_time_between_tasks(50);
 		defaultSetting.setTimeout(1000);
-		JschSetting.ChangeDefatulSetting(defaultSetting);
+		try {
+			JschSetting.ChangeDefatulSetting(defaultSetting);
+		} catch (ConfigException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -7,12 +7,13 @@ import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.sdong.jsch.config.RunParameters;
 
 public class Utils {
-	private static final Logger LOG = Logger.getLogger(Utils.class);
+	private static final Logger LOG = LoggerFactory.getLogger(Utils.class);
 
 	public static RunParameters checkArgs(String[] args) {
 		RunParameters runParameters = new RunParameters();
@@ -77,7 +78,7 @@ public class Utils {
 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			LOG.error(e);
+			LOG.error(e.getMessage());
 			System.err.println(e.getMessage());
 			printHelp();
 		}

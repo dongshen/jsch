@@ -6,14 +6,15 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.sdong.jsch.exception.ConfigException;
 
 import net.neoremind.sshxcute.core.IOptionName;
 
 public class GetConfig {
-	private static final Logger LOG = Logger.getLogger(GetConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(GetConfig.class);
 
 	public static ServerSetting getServerConfig(String inputFile) throws ConfigException {
 

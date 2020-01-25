@@ -1,13 +1,16 @@
 package com.sdong.jsch.config;
 
-import org.apache.log4j.Logger;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.sdong.jsch.exception.ConfigException;
 
+
+
 public class GetConfigTest {
 
-	private static final Logger LOG = Logger.getLogger(GetConfigTest.class);
+	private static final Logger LOG = LoggerFactory.getLogger(GetConfigTest.class);
 
 	@Test
 	public void testGetServerConfig() {
