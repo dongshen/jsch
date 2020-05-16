@@ -2,12 +2,16 @@ package com.sdong.jsch.execute;
 
 import static org.junit.Assert.fail;
 
-import org.junit.Test;
-
 import com.sdong.jsch.config.DefaultSetting;
 import com.sdong.jsch.exception.ConfigException;
 
+import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ExecuteTaskTest {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ExecuteTaskTest.class);
 
 	@Test
 	public void testExecute() {
@@ -22,8 +26,7 @@ public class ExecuteTaskTest {
 		try {
 			JschSetting.ChangeDefatulSetting(defaultSetting);
 		} catch (ConfigException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 		}
 	}
 

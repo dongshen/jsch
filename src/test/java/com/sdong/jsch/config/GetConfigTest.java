@@ -19,8 +19,7 @@ public class GetConfigTest {
 			ServerSetting serSet = GetConfig.getServerConfig(inputFile);
 			LOG.debug(serSet.toString());
 		} catch (ConfigException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 		}
 	}
 
