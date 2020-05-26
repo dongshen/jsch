@@ -6,6 +6,7 @@
 		<groupId>sdong</groupId>
 		<artifactId>sdong_base</artifactId>
 		<version>1.0</version>
+		<relativePath>../sdong_base</relativePath>			
 	</parent>
 
 	<groupId>com.sdong</groupId>
