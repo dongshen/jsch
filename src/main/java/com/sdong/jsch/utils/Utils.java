@@ -19,12 +19,6 @@ public class Utils {
 		RunParameters runParameters = new RunParameters();
 
 		Options options = new Options();
-		// add t option
-		// Option optInput = new Option("i", "input file for execute command
-		// line");
-		// Option optOutput = new Option("o", "result output file for execute
-		// command line");
-
 		options.addOption("i", true, "input file for execute command line");
 		options.addOption("o", true, "result output file for execute command line");
 		options.addOption("j", true, "the number of thread to run");
@@ -39,13 +33,13 @@ public class Utils {
 			if (cmd != null) {
 				// check input
 				if (!cmd.hasOption("i")) {
-					System.err.println("-i <input file for execute command line> is required.");
+					LOG.info("-i <input file for execute command line> is required.");
 					printHelp();
 				} else {
 					String inputFile = cmd.getOptionValue("i");
 					File infile = new File(inputFile);
 					if (!infile.exists()) {
-						System.err.println("Please make sure the input file is exist.");
+						LOG.info("Please make sure the input file is exist.");
 						System.exit(1);
 					}
 					runParameters.setInputFile(inputFile);
@@ -53,7 +47,7 @@ public class Utils {
 
 				// check output
 				if (!cmd.hasOption("o")) {
-					System.out.println("-o <result output file for execute command line> is required.");
+					LOG.info("-o <result output file for execute command line> is required.");
 				} else {
 					runParameters.setOutputFile(cmd.getOptionValue("o"));
 				}
@@ -63,12 +57,12 @@ public class Utils {
 					try {
 						int num = Integer.parseInt(threadnum);
 						if(num <= 0){
-							System.err.println("Wrong value for parameter -j");
+							LOG.info("Wrong value for parameter -j");
 							printHelp();
 						}
 						runParameters.setThreadNum(num);
 					} catch (NumberFormatException e) {
-						System.err.println("Wrong value for parameter -j");
+						LOG.info("Wrong value for parameter -j");
 						printHelp();
 					}
 				}
@@ -77,9 +71,7 @@ public class Utils {
 			}
 
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			LOG.error(e.getMessage());
-			System.err.println(e.getMessage());
 			printHelp();
 		}
 
@@ -87,15 +79,15 @@ public class Utils {
 	}
 
 	public static void printHelp() {
-		System.out.println("=============================");
-		System.out.println("=      AntMan -- V1.0       =");
-		System.out.println("= Create by Tom 2016.05.29  =");
-		System.out.println("=============================");
-		System.out.println(
+		LOG.info("=============================");
+		LOG.info("=      AntMan -- V1.0       =");
+		LOG.info("= Create by Tom 2016.05.29  =");
+		LOG.info("=============================");
+		LOG.info(
 				"AntMan will help you execute command based on Linux server list and return the output result to you.");
-		System.out.println("-i <filename> -- input file which include server list and executed command");
-		System.out.println("-o <filename> -- save executed command result");
-		System.out.println("-j <threadnum> -- the number of run thread, is option,default is 1");
+		LOG.info("-i <filename> -- input file which include server list and executed command");
+		LOG.info("-o <filename> -- save executed command result");
+		LOG.info("-j <threadnum> -- the number of run thread, is option,default is 1");
 		System.exit(1);
 	}
 }

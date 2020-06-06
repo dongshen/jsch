@@ -9,7 +9,7 @@
 		<relativePath>../sdong_base</relativePath>			
 	</parent>
 
-	<groupId>com.sdong</groupId>
+	<groupId>sdong</groupId>
 	<artifactId>antMan</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
